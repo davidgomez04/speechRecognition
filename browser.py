@@ -1,7 +1,7 @@
 import webbrowser
 from search_engine_parser import GoogleSearch
 
-CHROME_PATH = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s'
+CHROME_PATH = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s' #TODO use from .env
 
 def createURL(webpage):
     url = 'http://' + webpage + '.com/'
@@ -22,6 +22,12 @@ def parseSpeech(audio):
         openApp(app)
     if action == "google":
         googleSearch(text)
+
+def youtubeQuery(query):
+    pass
+
+def twitchQuery(query):
+    pass
 
 def openApp(app):
     print("Inside app")

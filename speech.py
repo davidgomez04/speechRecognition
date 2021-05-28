@@ -1,7 +1,19 @@
 #!/usr/bin/env python3
 
 import speech_recognition as sr
+import pyttsx3 as ts #text to speech lib
 import browser as wb
+
+
+
+engine = ts.init()
+
+def initTextToSpeech():
+    pass
+
+def speak(message):
+    engine.say(message)
+    engine.runAndWait()
 
 
 def computerMicList():
@@ -18,6 +30,7 @@ def run():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Say something!")
+        speak("Say something!")
         audio = r.listen(source)
 
     # recognize speech using Google Speech Recognition
