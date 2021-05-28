@@ -1,10 +1,28 @@
 import webbrowser
 
-def openWebsite(site):
+def createURL(webpage):
+    url = 'http://' + webpage + '.com/'
+    return url
 
-    print("Inside browser function")
 
-    url = 'http://docs.python.org/'
+def parseSpeech(audio):
+    command = audio.split()
+    action = command[0]
+    webpage = command[1]
+    app = ""
+    if action == "search":
+        openWebsite(webpage)
+    if action == "open":
+        openApp(app)
+
+def openApp(app):
+    print("Inside app")
+
+def openWebsite(webpage):
+
+    #url = 'http://docs.python.org/'
+
+    url = createURL(webpage)
 
     # MacOS
     #chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
@@ -17,4 +35,4 @@ def openWebsite(site):
 
     webbrowser.get(chrome_path).open(url)
 
-openWebsite()
+#openWebsite()

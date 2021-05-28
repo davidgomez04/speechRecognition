@@ -1,5 +1,4 @@
 import speech
-import browser as wb
 import tkinter as tk
 
 window = tk.Tk()
